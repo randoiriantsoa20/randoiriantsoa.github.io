@@ -41,7 +41,35 @@
         a:hover { opacity: 0.8; }
 
         /* --- HEADER & CONTACT --- */
-        header { margin-bottom: 60px; }
+        header { margin-bottom: 60px; 
+                    /* --- DESIGN DE LA PHOTO --- */
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        @media (min-width: 600px) {
+            .profile-container {
+                flex-direction: row;
+                text-align: left;
+                align-items: center;
+            }
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%; /* Rend la photo parfaitement ronde */
+            object-fit: cover;  /* Évite de déformer l'image */
+            border: 2px solid var(--accent); /* Un fin cercle vert autour */
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+        }
+        .header-text { flex: 1; }
+
+            
+        }
         header h1 {
             font-size: 3em;
             margin-bottom: 0px;
@@ -118,15 +146,21 @@
 
     <div class="container">
 
-        <header>
-            <h1>Rando Iriantsoa<br>RAZANAJATOVO</h1>
-            <p class="subtitle">Data Analyst | Spécialisé en SQL, Python & Business Intelligence</p>
-            <div class="contact-links">
-                <a href="[Lien LinkedIn]">LinkedIn</a>
-                <a href="[Lien GitHub]">GitHub</a>
-                <a href="mailto:votre.email@email.com">Contact</a>
+                <header class="profile-container">
+            <!-- Votre photo s'affichera ici -->
+            <img src="randojpeg.jpeg" alt="Rando Iriantsoa" class="profile-img">
+            
+            <div class="header-text">
+                <h1>Rando Iriantsoa<br>RAZANAJATOVO</h1>
+                <p class="subtitle">Data Analyst | Spécialisé en SQL, Python & Business Intelligence</p>
+                <div class="contact-links">
+                    <a href="[Lien LinkedIn]">LinkedIn</a>
+                    <a href="[Lien GitHub]">GitHub</a>
+                    <a href="mailto:randoiriantsoa@gmail.com">Contact</a>
+                </div>
             </div>
         </header>
+
 
         <section id="about">
             <h2 class="section-title">À propos</h2>
